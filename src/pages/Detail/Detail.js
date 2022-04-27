@@ -1,14 +1,16 @@
 import React from 'react';
-import {View,Text} from "react-native";
+import {View,Text, Image} from "react-native";
 import styles from './Detail.style'
 
-function Detail(props) {
+function Detail({route}) {
+    const {id} = route.params
     return (
-        <Viev>
-            <Text>
-                Detail!
-            </Text>
-        </Viev>
+        <View style={styles.container}>
+            <Image style={styles.image}/>
+            <Text style={styles.title}></Text>
+            <Text style={styles.desc}></Text>
+            <Text style={styles.price}></Text>
+        </View>
     );
 }
 

@@ -13,8 +13,16 @@ export default function App() {
   return (
       <NavigationContainer style={styles.container}>
         <Stack.Navigator>
-          <Stack.Screen name="ProductsPage" component={Products} />
-          <Stack.Screen name="DetailPage" component={Detail} />
+          <Stack.Screen name="ProductsPage" component={Products} options={{
+              title:"Dükkan",
+              headerStyle:{backgroundColor:'#90caf9'},
+              headerTitleStyle:{color:'white'}
+          }}/>
+          <Stack.Screen name="DetailPage" component={Detail} options={{
+              title:"Detail",
+              headerStyle:{backgroundColor:'#90caf9'},
+              headerTitleStyle:{color:'white'}
+          }}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
